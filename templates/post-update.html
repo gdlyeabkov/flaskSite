@@ -1,0 +1,32 @@
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport"-->
+<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <title>Document</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>-->
+<!--        страница про нас-->
+<!--    </h1>-->
+<!--</body>-->
+<!--</html>-->
+{% extends 'base.html' %}
+{% block title %}
+    главная страница
+{% endblock %}
+{% block body %}
+<div class="container">
+    <h1>обновление статьи</h1>
+    <form  method="post">
+        <input name="title" id="title" value="{{article.title}}" class="form-control" type="text"><br>
+        <textarea name="intro" id="intro" class="form-control">
+            {{article.intro}}
+        </textarea><br>
+        <textarea name="text" id="text" class="form-control" value="{{article.text}}"></textarea><br>
+        <input class="btn btn-success" value="отправить" type="обновить"><br>
+    </form>
+</div>
+{% endblock %}
